@@ -1,5 +1,4 @@
-import settings
-
+from core import settings
 from sqlalchemy import URL
 from sqlalchemy.orm import DeclarativeBase, Session
 from sqlalchemy.engine import create_engine
