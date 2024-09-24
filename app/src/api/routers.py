@@ -1,9 +1,8 @@
 from fastapi import APIRouter
+from controller import (
+    user_type,
+)
 
-API_ROUTERS = {
-    "user_type": APIRouter(prefix="user_type", tags=["user_type"]),
-}
 
-
-def get_router(base_route: str) -> APIRouter:
-    return API_ROUTERS.get(base_route)
+main_router = APIRouter()
+main_router.include_router(user_type.router)
